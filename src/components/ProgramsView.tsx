@@ -46,7 +46,7 @@ export default function ProgramsView({ setActiveTab, setDonationTarget, language
       {/* Sector Header */}
       <section className="bg-primary text-on-primary py-16 px-6 relative overflow-hidden select-none">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary via-primary to-primary"></div>
-        <div className="relative z-10 max-w-[1200px] mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-[1440px] mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold font-heading tracking-tight">
             {language === 'en' ? 'Our Core Programs' : 'हमारे मुख्य कार्यक्रम'}
           </h1>
@@ -57,7 +57,7 @@ export default function ProgramsView({ setActiveTab, setDonationTarget, language
       </section>
 
       {/* Program selector tabs */}
-      <section className="py-12 max-w-[1200px] mx-auto px-6">
+      <section className="py-12 max-w-[1440px] mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-4 border-b border-outline-variant/30 pb-6 mb-10 justify-center">
           {PROGRAMS.map((prog) => (
             <button

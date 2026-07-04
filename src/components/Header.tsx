@@ -35,7 +35,7 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
 
   return (
     <header className="bg-surface-container-lowest sticky top-0 z-50 shadow-sm w-full transition-colors duration-200">
-      <div className="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
+      <div className="flex justify-between items-center w-full px-6 py-4 max-w-[1440px] mx-auto">
         
         {/* Logo & Brand Name */}
         <div 

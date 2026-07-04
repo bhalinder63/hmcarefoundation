@@ -29,7 +29,7 @@ export default function ProjectsView({ setActiveTab, setDonationTarget, setDonat
       {/* Projects Header */}
       <section className="bg-primary text-on-primary py-16 px-6 relative overflow-hidden select-none">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary via-primary to-primary"></div>
-        <div className="relative z-10 max-w-[1200px] mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-[1440px] mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold font-heading tracking-tight">
             {language === 'en' ? 'Active Campaigns' : 'सक्रिय अभियान'}
           </h1>
@@ -40,7 +40,7 @@ export default function ProjectsView({ setActiveTab, setDonationTarget, setDonat
       </section>
 
       {/* Campaign cards container */}
-      <section className="py-12 max-w-[1200px] mx-auto px-6">
+      <section className="py-12 max-w-[1440px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PROJECTS.map((project) => {
             const percent = Math.min(100, Math.round((project.raised / project.goal) * 100));

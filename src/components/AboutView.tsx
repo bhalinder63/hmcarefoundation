@@ -36,7 +36,7 @@ export default function AboutView({ language }: AboutViewProps) {
       {/* Page Header */}
       <section className="bg-primary text-on-primary py-16 px-6 relative overflow-hidden select-none">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary via-primary to-primary"></div>
-        <div className="relative z-10 max-w-[1200px] mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-[1440px] mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold font-heading tracking-tight">
             {language === 'en' ? 'About Our Foundation' : 'हमारे फाउंडेशन के बारे में'}
           </h1>
@@ -47,7 +47,7 @@ export default function AboutView({ language }: AboutViewProps) {
       </section>
 
       {/* Narrative Section */}
-      <section className="py-16 max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="py-16 max-w-[1440px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block font-sans">
             Our Legacy of Trust
@@ -87,7 +87,7 @@ export default function AboutView({ language }: AboutViewProps) {
 
       {/* Core Values Section */}
       <section className="py-16 bg-surface-container-low border-t border-b border-outline-variant/15">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold font-heading text-primary mb-12 text-center">
             {language === 'en' ? 'Our Guiding Philosophy' : 'हमारी मार्गदर्शक नीतियां'}
           </h2>
@@ -110,7 +110,7 @@ export default function AboutView({ language }: AboutViewProps) {
       </section>
 
       {/* Milestones Timeline */}
-      <section className="py-16 max-w-[1200px] mx-auto px-6">
+      <section className="py-16 max-w-[1440px] mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-bold font-heading text-primary mb-12 text-center">
           {language === 'en' ? 'Our Developmental Timeline' : 'हमारा विकासात्मक सफर'}
         </h2>
@@ -132,7 +132,7 @@ export default function AboutView({ language }: AboutViewProps) {
 
       {/* Executive Team board */}
       <section className="py-16 bg-surface-container-lowest border-t border-outline-variant/15">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold font-heading text-primary mb-4 text-center">
             {language === 'en' ? 'Our Leadership Team' : 'हमारा नेतृत्व मंडल'}
           </h2>

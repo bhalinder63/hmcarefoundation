@@ -18,7 +18,7 @@ export default function Footer({ setActiveTab, language }: FooterProps) {
 
   return (
     <footer className="bg-primary text-on-primary mt-auto border-t-4 border-secondary/50">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 py-16 max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 py-16 max-w-[1440px] mx-auto">
         
         {/* Foundation Info */}
         <div className="col-span-1 md:col-span-2 space-y-4">
@@ -128,7 +128,7 @@ export default function Footer({ setActiveTab, language }: FooterProps) {
 
       {/* Copyright Bar */}
       <div className="border-t border-on-primary/10">
-        <div className="px-6 py-4 max-w-[1200px] mx-auto text-center flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="px-6 py-4 max-w-[1440px] mx-auto text-center flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="text-xs font-sans text-on-primary/60">
             {t.allRightsReserved}
           </p>

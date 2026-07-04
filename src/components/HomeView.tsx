@@ -111,7 +111,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-transparent"></div>
         
-        <div className="relative z-10 px-6 max-w-[1200px] mx-auto w-full text-on-primary">
+        <div className="relative z-10 px-6 max-w-[1440px] mx-auto w-full text-on-primary">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 2. Organization Introduction */}
       <section className="py-20 bg-surface-bright w-full border-b border-outline-variant/10">
-        <div className="max-w-[1200px] mx-auto px-6 text-center">
+        <div className="max-w-[1440px] mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +163,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 3. Mission & Vision */}
       <section className="py-20 bg-surface-container-lowest w-full">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             
             {/* Mission Card */}
@@ -210,7 +210,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 4. Impact Statistics */}
       <section className="py-16 bg-surface-container-low w-full border-t border-b border-outline-variant/25">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Stat 1 */}
@@ -258,7 +258,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 5. Latest Activities */}
       <section className="py-20 bg-surface-bright w-full">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary mb-12 text-center tracking-tight">
             {t.latestActivities}
           </h2>
@@ -308,7 +308,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 6. Testimonials (Voices of Impact) */}
       <section className="py-20 bg-surface-container-low w-full border-t border-outline-variant/15">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-6">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-primary tracking-tight">
               {t.voicesOfImpact}
@@ -438,7 +438,7 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
 
       {/* 7. Newsletter Subscription */}
       <section className="py-20 bg-primary-container w-full text-on-primary">
-        <div className="max-w-[1200px] mx-auto px-6 text-center">
+        <div className="max-w-[1440px] mx-auto px-6 text-center">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}

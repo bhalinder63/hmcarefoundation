@@ -90,7 +90,7 @@ export default function ContactView({ language }: ContactViewProps) {
       {/* Contact Header */}
       <section className="bg-primary text-on-primary py-16 px-6 relative overflow-hidden select-none">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary via-primary to-primary"></div>
-        <div className="relative z-10 max-w-[1200px] mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-[1440px] mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold font-heading tracking-tight">
             {language === 'en' ? 'Get In Touch' : 'हमसे संपर्क करें'}
           </h1>
@@ -101,7 +101,7 @@ export default function ContactView({ language }: ContactViewProps) {
       </section>
 
       {/* Main Grid layout */}
-      <section className="py-12 max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="py-12 max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
         
         {/* Left Column: Details & Map */}
         <div className="lg:col-span-5 space-y-8">

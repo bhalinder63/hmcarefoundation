@@ -145,7 +145,7 @@ export default function DonateView({ initialTarget = 'General Funds', initialAmo
       {/* Donate Header */}
       <section className="bg-primary text-on-primary py-16 px-6 relative overflow-hidden select-none">
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary via-primary to-primary"></div>
-        <div className="relative z-10 max-w-[1200px] mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-[1440px] mx-auto text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold font-heading tracking-tight">
             {language === 'en' ? 'Support Our Mission' : 'योगदान देकर समर्थन करें'}
           </h1>
