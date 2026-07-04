@@ -1,0 +1,6 @@
+{
+  "name": "HM Care Foundation",
+  "description": "A dedicated non-profit organization committed to bringing sustainable change through healthcare, education, and community empowerment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
