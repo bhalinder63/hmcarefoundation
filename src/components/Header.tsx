@@ -54,33 +54,43 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleNavClick(item.id)}
-              className={`text-sm font-semibold tracking-wide transition-all pb-1 border-b-2 font-sans ${
-                activeTab === item.id
-                  ? 'text-primary border-secondary font-bold'
-                  : 'text-on-surface-variant hover:text-primary border-transparent hover:border-outline-variant/50'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const isDisabled = item.id !== 'home';
+            return (
+              <button
+                key={item.id}
+                onClick={() => !isDisabled && handleNavClick(item.id)}
+                disabled={isDisabled}
+                aria-disabled={isDisabled}
+                title={isDisabled ? 'Coming soon' : undefined}
+                className={`text-sm font-semibold tracking-wide transition-all pb-1 border-b-2 font-sans ${
+                  activeTab === item.id
+                    ? 'text-primary border-secondary font-bold'
+                    : 'text-on-surface-variant hover:text-primary border-transparent hover:border-outline-variant/50'
+                } ${isDisabled ? 'opacity-40 cursor-not-allowed hover:text-on-surface-variant hover:border-transparent' : ''}`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
         </nav>
 
         {/* CTA & Language Selector */}
         <div className="hidden md:flex gap-4 items-center">
-          <button 
+          <button
             onClick={toggleLanguage}
-            className="text-primary hover:bg-surface-container-low transition-all px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-1 border border-outline-variant/30 bg-surface-container-lowest"
+            disabled
+            title="Coming soon"
+            className="text-primary hover:bg-surface-container-low transition-all px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-1 border border-outline-variant/30 bg-surface-container-lowest opacity-40 cursor-not-allowed"
           >
             <Globe className="w-4 h-4" />
             <span>{language === 'en' ? 'हिन्दी' : 'English'}</span>
           </button>
-          <button 
-            onClick={() => handleNavClick('donate')}
-            className="bg-secondary text-on-secondary px-5 py-2.5 rounded-lg font-bold hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 active:opacity-90 active:scale-95 duration-150 text-sm font-sans flex items-center gap-1.5"
+          <button
+            onClick={() => {}}
+            disabled
+            title="Coming soon"
+            className="bg-secondary text-on-secondary px-5 py-2.5 rounded-lg font-bold hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 active:opacity-90 active:scale-95 duration-150 text-sm font-sans flex items-center gap-1.5 opacity-40 cursor-not-allowed"
           >
             <Heart className="w-4 h-4 fill-current" />
             {t.donateNow}
@@ -90,9 +100,11 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
         {/* Mobile Hamburger Button */}
         <div className="flex md:hidden items-center gap-2">
           {/* Mobile Language Button */}
-          <button 
+          <button
             onClick={toggleLanguage}
-            className="text-primary p-2 rounded-lg text-xs font-semibold flex items-center gap-1 border border-outline-variant/20 bg-surface-container-lowest"
+            disabled
+            title="Coming soon"
+            className="text-primary p-2 rounded-lg text-xs font-semibold flex items-center gap-1 border border-outline-variant/20 bg-surface-container-lowest opacity-40 cursor-not-allowed"
           >
             <Globe className="w-4 h-4" />
             <span>{language === 'en' ? 'हिन्दी' : 'EN'}</span>
@@ -113,31 +125,41 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-outline-variant/30 bg-surface-container-lowest px-6 py-4 animate-fade-in shadow-inner">
           <div className="flex flex-col gap-4">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`text-left text-base py-2 font-semibold transition-colors ${
-                  activeTab === item.id
-                    ? 'text-secondary border-l-4 border-secondary pl-3'
-                    : 'text-on-surface-variant pl-3 hover:text-primary'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            
+            {navItems.map((item) => {
+              const isDisabled = item.id !== 'home';
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => !isDisabled && handleNavClick(item.id)}
+                  disabled={isDisabled}
+                  aria-disabled={isDisabled}
+                  title={isDisabled ? 'Coming soon' : undefined}
+                  className={`text-left text-base py-2 font-semibold transition-colors ${
+                    activeTab === item.id
+                      ? 'text-secondary border-l-4 border-secondary pl-3'
+                      : 'text-on-surface-variant pl-3 hover:text-primary'
+                  } ${isDisabled ? 'opacity-40 cursor-not-allowed hover:text-on-surface-variant' : ''}`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+
             <div className="border-t border-outline-variant/30 pt-4 mt-2 flex flex-col gap-3">
-              <button 
-                onClick={() => handleNavClick('donate')}
-                className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-bold hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 active:scale-95 text-center text-sm flex justify-center items-center gap-2"
+              <button
+                onClick={() => {}}
+                disabled
+                title="Coming soon"
+                className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-bold hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 active:scale-95 text-center text-sm flex justify-center items-center gap-2 opacity-40 cursor-not-allowed"
               >
                 <Heart className="w-4 h-4 fill-current" />
                 {t.donateNow}
               </button>
-              <button 
-                onClick={() => handleNavClick('volunteer')}
-                className="w-full border-2 border-primary text-primary hover:bg-surface-container-low py-2.5 rounded-lg font-bold transition-all text-center text-sm"
+              <button
+                onClick={() => {}}
+                disabled
+                title="Coming soon"
+                className="w-full border-2 border-primary text-primary hover:bg-surface-container-low py-2.5 rounded-lg font-bold transition-all text-center text-sm opacity-40 cursor-not-allowed"
               >
                 {t.volunteer}
               </button>
