@@ -57,40 +57,32 @@ export default function Footer({ setActiveTab, language }: FooterProps) {
           <ul className="space-y-3 text-sm font-sans">
             <li>
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left opacity-40 cursor-not-allowed"
+                onClick={() => handleLinkClick('volunteer')}
+                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left"
               >
                 {t.volunteer}
               </button>
             </li>
             <li>
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left opacity-40 cursor-not-allowed"
+                onClick={() => handleLinkClick('programs')}
+                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left"
               >
                 {t.programs}
               </button>
             </li>
             <li>
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left opacity-40 cursor-not-allowed"
+                onClick={() => handleLinkClick('projects')}
+                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left"
               >
                 {t.projects}
               </button>
             </li>
             <li>
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left opacity-40 cursor-not-allowed"
+                onClick={() => handleLinkClick('gallery')}
+                className="text-on-primary/80 hover:text-secondary-fixed-dim hover:underline transition-all text-left"
               >
                 {t.gallery}
               </button>

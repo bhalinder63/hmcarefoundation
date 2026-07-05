@@ -126,18 +126,14 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
             </p>
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-bold text-sm tracking-wide font-sans hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 duration-200 active:scale-95 opacity-40 cursor-not-allowed"
+                onClick={() => { setActiveTab('donate'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className="bg-secondary text-on-secondary px-8 py-3.5 rounded-lg font-bold text-sm tracking-wide font-sans hover:bg-secondary-container transition-all hover:ambient-shadow-lvl2 duration-200 active:scale-95"
               >
                 {t.donateNow}
               </button>
               <button
-                onClick={() => {}}
-                disabled
-                title="Coming soon"
-                className="bg-transparent border-2 border-primary-fixed text-primary-fixed hover:bg-primary-fixed/20 px-8 py-3.5 rounded-lg font-bold text-sm tracking-wide font-sans transition-all active:scale-95 opacity-40 cursor-not-allowed"
+                onClick={() => { setActiveTab('volunteer'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className="bg-transparent border-2 border-primary-fixed text-primary-fixed hover:bg-primary-fixed/20 px-8 py-3.5 rounded-lg font-bold text-sm tracking-wide font-sans transition-all active:scale-95"
               >
                 {t.volunteer}
               </button>
@@ -542,10 +538,12 @@ export default function HomeView({ setActiveTab, language }: HomeViewProps) {
                     Tax Exemption Eligible
                   </span>
                   <button
-                    onClick={() => {}}
-                    disabled
-                    title="Coming soon"
-                    className="bg-secondary hover:bg-secondary-container text-on-secondary font-bold text-xs px-5 py-2.5 rounded-lg transition-all opacity-40 cursor-not-allowed"
+                    onClick={() => {
+                      setSelectedActivity(null);
+                      setActiveTab('donate');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="bg-secondary hover:bg-secondary-container text-on-secondary font-bold text-xs px-5 py-2.5 rounded-lg transition-all"
                   >
                     Support this Initiative
                   </button>
